@@ -1,0 +1,48 @@
+body {
+  color: #f37137;
+  font-family: "Mulish", sans-serif;
+  background-color: #fffbec;
+}
+
+.card {
+  margin: 15px 0px;
+  box-shadow: none;
+}
+
+.card-title {
+  margin-top: 0px;
+}
+
+.col-md {
+  background-color: white;
+  margin: 0px 10px;
+}
+
+.border {
+  border-color: #f37137 !important;
+  width: 100%;
+  color: #f37137;
+}
+
+.add-btn,
+.add-btn:active {
+  background-color: #f37137 !important;
+  color: white;
+}
+
+.selected {
+  background-color: #f37137;
+  color: white;
+}
+
+.price {
+  margin-top: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+.container {
+  margin-top: 15px;
+}

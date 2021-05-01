@@ -19,5 +19,4 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('bite.urls'))
-    # path('sections/create/', routes.create_section, name="Create Section")
 ]

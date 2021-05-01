@@ -15,7 +15,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"title\": \"Lunch Specials del\",\r\n    \"description\": \"Very popular!!!\"\r\n}",
+							"raw": "{\r\n    \"title\": \"Lunch Specials S\",\r\n    \"description\": \"Very popular!!!\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -104,7 +104,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"title\": \"Lunch Specials #2\",\r\n    \"description\": \"Very popular!!!\"\r\n}",
+							"raw": "{\r\n    \"title\": \"Lunch Specials #3\",\r\n    \"description\": \"Very popular!!!\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -112,7 +112,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://127.0.0.1:8000/section/4/",
+							"raw": "http://127.0.0.1:8000/section/3/",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -123,7 +123,7 @@
 							"port": "8000",
 							"path": [
 								"section",
-								"4",
+								"3",
 								""
 							]
 						}
@@ -136,7 +136,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://127.0.0.1:8000/section/7",
+							"raw": "http://127.0.0.1:8000/section/8/",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -147,7 +147,8 @@
 							"port": "8000",
 							"path": [
 								"section",
-								"7"
+								"8",
+								""
 							]
 						}
 					},
@@ -254,7 +255,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"title\": \"Soup Lunch #5\",\r\n    \"description\": \"Very soup!\",\r\n    \"price\": 2,\r\n    \"section\": [1],\r\n    \"modifiers\": [1, 2]\r\n}",
+							"raw": "{\r\n    \"title\": \"Soup Lunch #5\",\r\n    \"description\": \"Very soup!\",\r\n    \"price\": 10\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -262,7 +263,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://127.0.0.1:8000/item/1/",
+							"raw": "http://127.0.0.1:8000/item/4/",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -273,7 +274,7 @@
 							"port": "8000",
 							"path": [
 								"item",
-								"1",
+								"4",
 								""
 							]
 						}
@@ -286,7 +287,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://127.0.0.1:8000/item/7",
+							"raw": "http://127.0.0.1:8000/item/4/",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -297,7 +298,8 @@
 							"port": "8000",
 							"path": [
 								"item",
-								"7"
+								"4",
+								""
 							]
 						}
 					},
@@ -315,7 +317,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"title\": \"No veggies\"\r\n}",
+							"raw": "{\r\n    \"title\": \"No veggies1\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -436,7 +438,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://127.0.0.1:8000/modifier/7",
+							"raw": "http://127.0.0.1:8000/modifier/7/",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -447,7 +449,58 @@
 							"port": "8000",
 							"path": [
 								"modifier",
-								"7"
+								"7",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Menu",
+			"item": [
+				{
+					"name": "Entire menu",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/menu",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"menu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Full menu of a section",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/menu/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"menu",
+								"1"
 							]
 						}
 					},

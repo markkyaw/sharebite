@@ -22,8 +22,16 @@ py -m pip install -r requirements.txt
 source env\Scripts\activate
 ```
 
+4. Import Postman
+
+- Import [sharebite.postman_collection.json](sharebite.postman_collection.json) into postman to test api calls
+
 ## Runserver
 
 ```bash
 py manage.py runserver
 ```
+
+## Note
+
+I'm unable to implement how to perform CRUD operations to map Items and Modifiers. The mapping is doable through Django Admin, however after spending hours on it, I could not figure out how to do it through http rest endpoint.

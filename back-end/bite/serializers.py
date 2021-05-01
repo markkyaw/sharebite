@@ -18,30 +18,24 @@ class ModifierSerializer(serializers.ModelSerializer):
 
 
 class ItemSerializer(serializers.ModelSerializer):
-    # modifiers = ModifierSerializer(many=True)
+    # modifiers = serializers.PrimaryKeyRelatedField(many=True, queryset=Modifier.objects.all())
+    modifiers =  ModifierSerializer(many=True)
+    # section = serializers.PrimaryKeyRelatedField(many=True, queryset=Section.objects.all())
 
     def create(self, validated_data):
+        print(validated_data)
         return Item.objects.create(**validated_data)
 
     def update(self, instance, validated_data):
         instance.title = validated_data.get('title', instance.title)
         instance.description = validated_data.get('description', instance.description)
         instance.price = validated_data.get('price', instance.price)
-        print("section", validated_data.get('section', instance.section))
-        # try:
-        #     instance.section = Section.objects.get(title=validated_data.get('section', instance.section))
-        # except Section.DoesNotExist:
-        #     raise Http404
-        # print("Section", validated_data.get('section', instance.section))
-        # print("Modifiers", validated_data.get('modifiers', instance.modifiers))
-        # for mod in validated_data.get('modifiers', instance.modifiers):
-        #     print("mod", mod)
         instance.save()
         return instance
 
     class Meta:
         model = Item
-        fields = ['id', 'title']
+        fields = ['id', 'title', 'modifiers']
 
 
 class SectionSerializer(serializers.ModelSerializer):

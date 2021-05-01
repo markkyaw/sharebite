@@ -48,7 +48,7 @@ class ItemSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Item
-        fields = ['id', 'title', 'price']
+        fields = ['id', 'title', 'description', 'price']
 
 
 class ItemPrintSerializer(serializers.ModelSerializer):
